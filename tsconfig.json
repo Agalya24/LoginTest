@@ -1,0 +1,14 @@
+{
+    "extends": "./tsconfig.json",
+"compilerOptions": {
+    "experimentalDecorators": true,
+    "outDir": "../test",
+    "module": "commonjs",
+    "target": "es2018",
+    "types": [
+        "jasmine",
+        "jasminewd2",
+        "node"
+    ]
+}
+}

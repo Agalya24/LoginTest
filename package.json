@@ -1,0 +1,26 @@
+{
+  "name": "client",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "install": "npm install --ignore-scripts --no-optional",
+    "start": "ng serve --configuration=local",
+    "runTest": "npm run ci-test -- --baseUrl=https://login.dev.qa-experience.com",
+    "ci-test": "node -expose-gc --max-old-space-size=8192 ./node_modules/protractor/bin/protractor ./test/protractor.conf.js --cucumberOpts.tags=~@ignore --cucumberOpts.tags=@test"
+  
+  },
+  
+  "private": true,
+  "dependencies": {
+    "chai": "^4.3.4",
+    "cucumber-tsflow": "^4.0.0-preview.7",
+    "protractor": "^7.0.0",
+    "protractor-cucumber-framework": "^8.2.11",
+    "ts-node": "^10.4.0"
+    
+  },
+  "devDependencies": {
+    "@angular/cli": "^13.1.4",
+    "webdriver-manager": "^12.1.8"
+  }
+}
